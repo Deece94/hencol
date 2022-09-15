@@ -16,6 +16,16 @@ body {
     height: 600px;
 }
 
+.banner-opaque {
+    background-image: url("../img/banner1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .content {
     max-width: 1110px;
     margin: 0 auto;
@@ -42,4 +52,16 @@ body {
 .hover-underline.selected:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+.section-triangle:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    border: 20px solid transparent;
+    border-top-color: #ffffff;
+    top: -32px;
+    z-index: 999;
+    left: 50%;
+    margin-left: -20px;
 }
