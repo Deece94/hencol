@@ -4,7 +4,7 @@ body {
 }
 
 .banner1 {
-    background-image: url("../img/banner1.jpg");
+    background-image: url("/img/banner1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -13,13 +13,25 @@ body {
 }
 
 .banner-opaque {
-    background-image: url("../img/banner1.jpg");
+    background-image: url("/img/banner1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center;
     height: 300px;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section-heading::after {
+    content: "";
+    position: relative;
+    display: block;
+    left: 0;
+    bottom: -10;
+    width: 125px;
+    background-color: rgb(29, 72, 167);
+    height: 2px;
+    margin-top: -1px;
 }
 
 .content {
