@@ -3,8 +3,19 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Hencol Business Advisory - About Us">
+    <style>
+        .banner-about {
+            background-image: url("/img/banner1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center;
+            height: 300px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
     <main>
-        <section class="banner-opaque">
+        <section class="banner-about">
             <div class="flex items-center justify-center h-full">
                 <h2 class="text-6xl text-white text-shadow">About Us</h2>
             </div>

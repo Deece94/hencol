@@ -3,25 +3,6 @@ body {
     line-height: 1.4;
 }
 
-.banner1 {
-    background-image: url("/img/banner1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center;
-    height: 600px;
-}
-
-.banner-opaque {
-    background-image: url("/img/banner1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center;
-    height: 300px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
 .section-heading::after {
     content: "";
     position: relative;
@@ -74,8 +55,4 @@ body {
     100% {
         opacity: 1;
     }
-}
-
-.filter-white {
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
