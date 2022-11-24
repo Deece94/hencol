@@ -66,12 +66,21 @@ import Layout from "../layouts/Layout.astro";
                         </h2>
                     </div>
 
-                    <div class="w-full grid grid-cols-1 md:grid-cols-3 justify-items-center gap-2">
+                    <div class="w-full grid grid-cols-1 md:grid-cols-3 justify-items-center gap-2 mb-4">
                         <InfoCard src="img/target.svg" />
 
                         <InfoCard src="img/handshake.svg" />
 
                         <InfoCard src="img/bar-graph.svg" />
+                    </div>
+
+                    <div class="flex justify-center">
+                        <a
+                            href="/about"
+                            class="bg-light-red hover:bg-dark-red text-white p-3 rounded-lg cursor-pointer font-bold"
+                        >
+                            About Us <i class="fa-solid fa-chevron-right"></i>
+                        </a>
                     </div>
                 </section>
 
