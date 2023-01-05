@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Financial Planning">
+    <style>
+        .banner-about {
+            background-image: url("/img/banner1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center;
+            height: 300px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <main>
+        <section class="banner-about">
+            <div class="flex items-center justify-center h-full">
+                <h2 class="text-6xl text-white text-shadow">Accounting</h2>
+            </div>
+        </section>
+
+        <section class="bg-white text-lg py-8">
+            <div class="max-w-7xl mx-auto">
+                <section class="w-full flex flex-wrap mt-10">
+                    <div class="w-full md:w-1/3 px-2 my-auto">
+                        <img class="w-full rounded drop-shadow" src="img/computer_report.jpg" />
+                    </div>
+                    <div class="w-full md:w-2/3 px-2 my-auto fade-in">
+                        <p class="py-3">
+                            At Hencol, we are dedicated to providing top-quality accounting services to businesses and
+                            individuals alike. Our team of experienced and qualified accountants is committed to helping
+                            our clients succeed by providing them with accurate, timely, and reliable financial
+                            information and advice.
+                        </p>
+
+                        <p class="py-3">Our accounting services include:</p>
+
+                        <ul class="list-disc list-inside py-3">
+                            <li>Bookkeeping and financial record-keeping</li>
+                            <li>
+                                Preparation of financial statements, including balance sheets, income statements, and
+                                statements of cash flows
+                            </li>
+                            <li>Tax preparation and planning</li>
+                            <li>Payroll processing</li>
+                            <li>Budgeting and financial forecasting</li>
+                            <li>Business advisory services, including business planning and strategy development</li>
+                        </ul>
+
+                        <p class="py-3">
+                            We offer a range of packages and pricing options to meet the needs and budgets of our
+                            clients. Whether you are a small business owner in need of full-service accounting support
+                            or an individual seeking assistance with tax preparation, we have a solution for you.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="bg-white text-lg py-8">
+            <div class="max-w-7xl mx-auto fade-in">
+                <p class="py-3">
+                    At Hencol, we are committed to building long-term relationships with our clients. We take the time
+                    to understand your unique situation and goals, and work with you to develop customized accounting
+                    solutions that meet your needs.
+                </p>
+                <p class="py-3">
+                    If you are interested in learning more about our accounting services, we invite you to contact us to
+                    schedule a consultation with one of our skilled accountants. Let us help you achieve financial
+                    success.
+                </p>
+            </div>
+            <div class="flex justify-center">
+                <a
+                    href="/contact"
+                    class="bg-light-red hover:bg-dark-red text-white p-3 rounded-lg cursor-pointer font-bold"
+                >
+                    Contact Us <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+</Layout>

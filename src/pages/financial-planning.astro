@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Financial Planning">
+    <style>
+        .banner-about {
+            background-image: url("/img/banner1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center;
+            height: 300px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <main>
+        <section class="banner-about">
+            <div class="flex items-center justify-center h-full">
+                <h2 class="text-6xl text-white text-shadow">Financial Planning</h2>
+            </div>
+        </section>
+
+        <section class="bg-white text-lg py-8">
+            <div class="max-w-7xl mx-auto">
+                <section class="w-full flex flex-wrap mt-10">
+                    <div class="w-full md:w-1/3 px-2 my-auto">
+                        <img class="w-full rounded drop-shadow" src="img/computer_report.jpg" />
+                    </div>
+                    <div class="w-full md:w-2/3 px-2 my-auto fade-in">
+                        <p class="py-3">
+                            At Hencol, we understand the importance of planning for your retirement and are dedicated to
+                            providing top-quality superannuation services to help you achieve your financial goals.
+                        </p>
+
+                        <p class="py-3">
+                            As a full-service accounting firm, we offer a range of superannuation services to meet the
+                            unique needs of our clients. Whether you are an individual looking to establish a
+                            self-managed super fund (SMSF) or a business owner seeking to set up a corporate
+                            superannuation plan for your employees, we have the expertise and experience to help you
+                            navigate the process.
+                        </p>
+
+                        <p class="py-3">
+                            Our team of highly trained and qualified accountants can assist you with all aspects of
+                            superannuation, including:
+                        </p>
+
+                        <ul class="list-disc list-inside py-3">
+                            <li>Setting up and registering a new superannuation fund</li>
+                            <li>Managing and administering an existing superannuation fund</li>
+                            <li>Preparing and lodging superannuation returns and reports</li>
+                            <li>Providing investment advice and recommendations for your superannuation fund</li>
+                            <li>
+                                Assisting with the establishment of SMSFs, including drafting trust deeds and
+                                establishing corporate trustee structures
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="bg-white text-lg py-8">
+            <div class="max-w-7xl mx-auto fade-in">
+                <p class="py-3">
+                    At Hencol, we pride ourselves on our personalized approach to client service. We take the time to
+                    understand your specific needs and financial goals, and work with you to develop a customized
+                    superannuation strategy that meets your unique situation. If you are interested in learning more
+                    about our superannuation services, we invite you to contact us to schedule a consultation with one
+                    of our knowledgeable accountants. Let us help you plan for a secure and comfortable retirement.
+                </p>
+            </div>
+            <div class="flex justify-center">
+                <a
+                    href="/contact"
+                    class="bg-light-red hover:bg-dark-red text-white p-3 rounded-lg cursor-pointer font-bold"
+                >
+                    Contact Us <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+</Layout>
