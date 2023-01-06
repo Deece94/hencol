@@ -3,5 +3,103 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Hencol Business Advisory">
-    <main></main>
+    <style>
+        .banner-about {
+            background-image: url("/img/banner1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center;
+            height: 300px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <script>
+        let name: String = "";
+        const nameInput: HTMLElement | null = document.getElementById("name");
+        nameInput?.addEventListener("input", (e) => {
+            const target = e.target as HTMLInputElement;
+            name = target.value;
+        });
+
+        let email: String = "";
+        const emailInput: HTMLElement | null = document.getElementById("email");
+        emailInput?.addEventListener("input", (e) => {
+            const target = e.target as HTMLInputElement;
+            email = target.value;
+        });
+
+        let message = "";
+        const messageInput: HTMLElement | null = document.getElementById("message");
+        messageInput?.addEventListener("input", (e) => {
+            const target = e.target as HTMLInputElement;
+            message = target.value;
+        });
+
+        const send = async (e: Event) => {
+            e.preventDefault();
+
+            console.log(name, email, message);
+
+            const to: String = "";
+            const from: String = "";
+
+            const res: Response = await fetch("/api/email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    message,
+                    to,
+                    from,
+                }),
+            });
+            const data: any = await res.json();
+            if (data.success) {
+                alert("Message sent successfully");
+            } else {
+                alert("Message failed to send");
+            }
+        };
+
+        const sendBtn = document.getElementById("send-btn");
+        sendBtn?.addEventListener("click", send);
+    </script>
+    <main>
+        <section class="banner-about">
+            <div class="flex items-center justify-center h-full">
+                <h2 class="text-6xl text-white text-shadow">Contact Us</h2>
+            </div>
+        </section>
+
+        <section class="bg-white text-lg py-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row">
+                    <div class="flex flex-col w-full md:w-1/2">
+                        <div class="flex flex-col w-full">
+                            <label for="name" class="text-gray-500 text-sm">Name</label>
+                            <input type="text" name="name" id="name" class="border border-gray-300 rounded-md p-2" />
+                        </div>
+                        <div class="flex flex-col w-full mt-4">
+                            <label for="email" class="text-gray-500 text-sm">Email</label>
+                            <input type="email" name="email" id="email" class="border border-gray-300 rounded-md p-2" />
+                        </div>
+                        <div class="flex flex-col w-full mt-4">
+                            <label for="message" class="text-gray-500 text-sm">Message</label>
+                            <textarea name="message" id="message" class="border border-gray-300 rounded-md p-2"
+                            ></textarea>
+                        </div>
+                        <div class="flex flex-col w-full mt-4">
+                            <button type="submit" class="bg-blue-500 text-white rounded-md p-2" id="send-btn"
+                                >Send</button
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </Layout>
